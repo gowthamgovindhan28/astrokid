@@ -1,21 +1,24 @@
-Canvas Boilerplate is the go-to solution for quickly creating modern canvas pieces using ES6 and webpack.
+# AstroKid: The Return Journey
 
-## Getting Started
+## Overview
+AstroKid: The Return Journey is an interactive web-based game where players guide an astronaut kid across a planet to help him reach home. The game features immersive gameplay and interactive controls, offering a fun and engaging experience for players of all ages.
 
-1.  Clone the repo:
+## Features
+- **Interactive Gameplay:** Players can control the astronaut kid's movements using keyboard inputs.
+- **Level Design:** Currently includes the first level, with plans for future expansions and additional levels.
+- **Responsive Design:** Optimized for both laptop and PC views, with mobile support in desktop mode.
 
-        git clone https://github.com/christopher4lis/canvas-boilerplate.git
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
 
-2.  Install dependencies:
+## Live Demo
+You can try out AstroKid by visiting the following link: [AstroKid Live Demo](https://astrokidgame.netlify.app/)
 
-        yarn
 
-    or
 
-        npm install
+## Installation
+To run AstroKid locally, clone the repository and open the `index.html` file in your web browser.
 
-3.  Run webpack:
 
-        npm start
-
-Your canvas piece should open up automatically at http://localhost:3000 and you should see 'HTML CANVAS BOILERPLATE' on hover.
