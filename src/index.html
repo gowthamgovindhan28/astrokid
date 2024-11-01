@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AstroKid: The Return Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+            color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        h1, h2 {
+            color: #ff7f50;
+            text-align: center;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+
+        h1:hover, h2:hover {
+            color: #ffab76;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        header {
+            padding: 10px;
+            border-bottom: 2px solid #ff7f50;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Content Sections */
+        section {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            padding: 8px 0;
+            color: #ff7f50;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        ul li:hover {
+            color: #ffab76;
+        }
+
+        kbd {
+            background-color: #555;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 1em;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease;
+        }
+
+        kbd:hover {
+            background-color: #777;
+        }
+
+        /* Game Card */
+        .game-card {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            background: #444;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+        }
+
+        .game-card img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .game-card:hover img {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff7f50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .play-button:hover {
+            background-color: #ffab76;
+            scale: 1.05;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            text-align: center;
+            padding: 15px;
+            background: #333;
+            border-top: 2px solid #ff7f50;
+            position: relative; /* Change to relative for better placement */
+            margin-top: 20px; /* Add margin to avoid overlap */
+        }
+
+        footer p {
+            font-size: 0.9em;
+            color: #ccc;
+            transition: color 0.3s ease;
+        }
+
+        footer p:hover {
+            color: #ff7f50;
+        }
+
+        /* Centered Message for Smaller Screens */
+        #small-screen-message {
+            display: none;
+            padding: 20px;
+            background-color: #ff7f50;
+            color: #333;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 500px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        #small-screen-message:hover {
+            background-color: #ffab76;
+        }
+
+        @media (max-width: 800px) {
+            #content {
+                display: none;
+            }
+            
+            #small-screen-message {
+                display: block;
+            }
+        }
+
+        /* Flexbox for Controls */
+        #first, #second {
+            display: flex;
+            justify-content: space-around;
+            margin: 10px 0; /* Add margin for better spacing */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Message for Smaller Screens -->
+    <section id="small-screen-message">
+        This website is optimized for larger screens. Please view on a laptop or PC for the best experience or open Desktop Mode.
+    </section>
+
+    <!-- Main Content (hidden on smaller screens) -->
+    <div id="content">
+        <!-- Game Title Section -->
+        <header>
+            <h1>AstroKid: The Return Journey</h1>
+            <p>Developed by Gowtham G</p>
+        </header>
+
+        <!-- Game Description Section -->
+        <section id="description">
+            <h2>About the Game</h2>
+            <p>Welcome to <strong>AstroKid: The Return Journey</strong>! In this game, you’ll guide a young astronaut boy as he navigates a whimsical landscape filled with unique challenges. Instead of facing dangerous obstacles, AstroKid encounters quirky phenomena, like making things wet or dealing with sizeable holes in the ground.</p>
+            <p>Explore this vibrant terrain and use your skill and quick reflexes to cleverly maneuver through these playful challenges, all in a quest to reunite him with his home.</p>
+        </section>
+        
+
+        <!-- Game Card Section -->
+        <div class="game-card">
+            <img src="https://jazzy-monstera-77f74f.netlify.app/img.png" alt="AstroKid Game">
+            <button class="play-button" onclick="location.href='game.html'">Play Game</button>
+        </div>
+
+        <!-- Controls Section -->
+        <section id="controls">
+            <h2>Controls</h2>
+            <ul>
+                <div id="first">
+                    <li><strong>Move Right:</strong> Press <kbd>D</kbd></li>
+                    <li><strong>Move Left:</strong> Press <kbd>A</kbd></li>
+                </div>
+                <div id="second">
+                    <li><strong>Jump:</strong> Press <kbd>W</kbd></li>
+                    <li><strong>Kid's Voice:</strong> Press <kbd>S</kbd></li>
+                </div>
+            </ul>
+            <p>Master these controls to help AstroKid navigate safely and avoid the unknown perils of this foreign landscape.</p>
+        </section>
+
+        <!-- Level Info Section -->
+        <section id="level-info">
+            <h2>Game Levels</h2>
+            <p>This is just the beginning! You’re currently playing <strong>Level 1</strong>, where you’ll get accustomed to the landscape and the basic controls. Future levels will present more difficult terrains, introducing new obstacles and surprises.</p>
+        </section>
+
+        <!-- Developer Section -->
+        <section id="developer">
+            <h2>About the Developer</h2>
+            <p>This game was created by <strong>Gowtham G</strong>, a passionate web developer skilled in HTML, CSS, and JavaScript. AstroKid: The Return Journey is a project inspired by the adventure of exploring the unknown while finding a way home.</p>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 AstroKid: The Return Journey | Developed by Gowtham G</p>
+    </footer>
+
+</body>
+</html>
